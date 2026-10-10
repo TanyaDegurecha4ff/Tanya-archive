@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#080d0a">
+<title>Bab 02 | Tanya Archive</title>
+<style>
+:root {
+  --green: #a5ffb4;
+  --muted: #72917a;
+  --bg: #080d0a;
+  --panel: #101a13;
+  --line: #294331;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #dce9de;
+  font: 16px/1.8 monospace;
+}
+header {
+  padding: 24px 18px;
+  background: #0c140e;
+  border-bottom: 1px solid var(--line);
+}
+.tag, .label { color: var(--muted); }
+.tag { font-size: 12px; }
+h1, h2 { color: var(--green); }
+h1 { font-size: clamp(26px, 6vw, 40px); line-height: 1.3; }
+h2 { font-size: 18px; }
+nav { display: flex; flex-wrap: wrap; gap: 8px; }
+nav a {
+  color: var(--green);
+  border: 1px solid var(--line);
+  padding: 6px 9px;
+  text-decoration: none;
+}
+nav a:hover { background: var(--green); color: var(--bg); }
+main { max-width: 850px; margin: auto; padding: 22px 16px; }
+.status, .panel {
+  border: 1px solid var(--line);
+  padding: 16px;
+  margin-bottom: 18px;
+  overflow-wrap: anywhere;
+}
+.status { color: var(--green); }
+.panel { background: var(--panel); }
+.portrait {
+  display: block;
+  width: 100%;
+  max-width: 440px;
+  max-height: 560px;
+  object-fit: contain;
+  object-position: center;
+  margin: 16px auto;
+  border: 1px solid var(--line);
+  background: #080d0a;
+}
+blockquote {
+  margin: 16px 0;
+  padding: 16px;
+  border-left: 3px solid var(--green);
+  background: #0b130d;
+  color: var(--green);
+  font-size: 17px;
+}
+.small { color: var(--muted); font-size: 12px; }
+footer {
+  border-top: 1px solid var(--line);
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="tag">IMPERIAL INTELLIGENCE NETWORK // II</div>
+  <h1>CHARACTER<br>DOSSIER</h1>
+  <p>BAB 02 // SUBJEK: TANYA VON DEGURECHAFF</p>
+  <nav aria-label="Navigasi utama">
+    <a href="index.html">BERANDA</a>
+    <a href="personel.html">PERSONEL</a>
+    <a href="arsip.html" aria-current="page">ARSIP</a>
+    <a href="tentang.html">TENTANG</a>
+  </nav>
+</header>
+
+<main>
+  <div class="status">
+    ● RECORD ACCESSED<br>
+    FILE: 002<br>
+    CLASSIFICATION: CHARACTER DOSSIER
+  </div>
+
+  <section class="panel">
+    <div class="label">QUOTE // PHILOSOPHY</div>
+    <blockquote>
+      Kebebasan tanpa hukum berarti anarki; hukum
+      tanpa kebebasan berarti tirani. Jadi, meskipun
+      mereka membenci pembatasan, mereka takut akan
+      kebebasan tanpa batas.
+    </blockquote>
+    <p class="small">— Tanya Degurechaff</p>
+  </section>
+
+  <section class="panel">
+    <div class="label">RECORD 002-A // VISUAL IDENTIFICATION</div>
+    <h2>Tanya von Degurechaff</h2>
+    <img
+      class="portrait"
+      src="tanya.jpg"
+      alt="Potret Tanya von Degurechaff"
+    >
+    <p class="small">
+      VISUAL RECORD // TANYA VON DEGURECHAFF
+    </p>
+  </section>
+
+  <section class="panel">
+    <div class="label">RECORD 002-B // BACKGROUND</div>
+    <h2>Latar Belakang</h2>
+    <p>
+      Tanya von Degurechaff adalah protagonis utama
+      Youjo Senki: The Saga of Tanya the Evil.
+      Sebelum bereinkarnasi, ia merupakan seorang
+      pegawai Jepang modern yang ateis dan sangat
+      mengutamakan rasionalitas serta efisiensi.
+    </p>
+    <p>
+      Setelah berkonfrontasi dengan entitas misterius
+      yang dikenal sebagai Being X, ia terlahir kembali
+      sebagai seorang gadis di dunia alternatif yang
+      dilanda peperangan.
+    </p>
+  </section>
+
+  <section class="panel">
+    <div class="label">RECORD 002-C // MILITARY CAREER</div>
+    <h2>Karier Militer</h2>
+    <p>
+      Di kehidupan barunya, Tanya menunjukkan bakat
+      sihir yang luar biasa dan memasuki militer
+      Kekaisaran pada usia muda. Kecerdasan taktis,
+      disiplin, dan kemampuannya dalam pertempuran
+      membuatnya naik pangkat dengan cepat.
+    </p>
+    <p>
+      Setelah menyelesaikan pendidikan militernya,
+      ia memperoleh gelar von dan dipercaya memimpin
+      unit penyihir udara Kekaisaran.
+    </p>
+    <p>
+      Unit yang paling dikenal di bawah komandonya
+      adalah Batalyon Penyihir Udara Kekaisaran ke-203.
+    </p>
+  </section>
+
+  <section class="panel">
+    <div class="label">RECORD 002-D // DECORATIONS</div>
+    <h2>Penghargaan dan Prestasi</h2>
+    <ul>
+      <li>Medali Serangan Sayap Perak.</li>
+      <li>Lencana Serangan Lapangan.</li>
+      <li>Lencana Luka.</li>
+    </ul>
+    <p class="small">
+      Catatan: nama dan rincian penghargaan dapat
+      berbeda menurut terjemahan sumber.
+    </p>
+  </section>
+
+  <section class="panel">
+    <div class="label">RECORD 002-E // CHARACTER ANALYSIS</div>
+    <h2>Ideologi dan Kepribadian</h2>
+    <p>
+      Tanya dikenal karena pendekatan yang dingin,
+      analitis, dan pragmatis. Ia berusaha memahami
+      perang melalui logika, hierarki, serta efisiensi,
+      sambil berusaha menghindari kematian yang
+      dianggapnya tidak perlu.
+    </p>
+    <p>
+      Pertentangan antara kebebasan, hukum, dan
+      kekuasaan menjadi salah satu tema menarik
+      dalam perjalanan karakternya.
+    </p>
+  </section>
+
+  <nav aria-label="Navigasi bab">
+    <a href="personel.html">← BAB 01: PERSONEL</a>
+    <a href="tentang.html">BAB BERIKUTNYA →</a>
+  </nav>
+</main>
+
+<footer>
+  TANYA ARCHIVE // EST. 2026<br>
+  END OF RECORD // FILE 002
+</footer>
+</body>
+</html>
