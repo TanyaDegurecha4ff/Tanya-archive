@@ -5,8 +5,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#080d0a">
-<meta name="description" content="Arsip pribadi Tanya von Degurechaff. Pusat dokumentasi, profil, dan catatan intelijen.">
-<title>Bab 00 | Tanya Intelligence Archive</title>
+<meta name="description" content="Arsip pribadi Tanya von Degurechaff. Catatan identitas, personel, dan dokumentasi pribadi.">
+<title>BAB 00 // Tanya Intelligence Archive</title>
 
 <style>
 :root {
@@ -15,6 +15,7 @@
   --bg: #080d0a;
   --panel: #101a13;
   --line: #294331;
+  --gold: #c8b77b;
 }
 
 * {
@@ -46,9 +47,9 @@ header {
 }
 
 .tag {
-  color: var(--green);
+  color: var(--gold);
   font-size: 12px;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
 }
 
 h1 {
@@ -61,27 +62,43 @@ h1 {
 .subtitle {
   color: var(--muted);
   font-size: 13px;
+  letter-spacing: 1px;
 }
 
 nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
   margin-top: 24px;
 }
 
 nav a {
-  color: var(--green);
-  border: 1px solid var(--line);
-  padding: 7px 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #dce9de;
   text-decoration: none;
   font-size: 13px;
 }
 
-nav a:hover,
-nav a:focus {
+nav a .number {
+  display: inline-block;
+  border: 1px solid var(--line);
+  padding: 2px 6px;
+  color: var(--green);
+}
+
+nav a:hover .number,
+nav a:focus .number,
+nav a[aria-current="page"] .number {
   background: var(--green);
   color: var(--bg);
+  border-color: var(--green);
+}
+
+nav a:hover,
+nav a:focus {
+  color: var(--green);
 }
 
 main {
@@ -172,20 +189,28 @@ footer {
 <header>
   <div class="container">
     <div class="tag">
-      IMPERIAL INTELLIGENCE NETWORK // II
+      PERSONAL MILITARY ARCHIVE // BAB 00
     </div>
 
     <h1>TANYA VON<br>DEGURECHAFF</h1>
 
     <div class="subtitle">
-      PERSONAL INTELLIGENCE ARCHIVE
+      PRIVATE RECORD // PERSONALLY MAINTAINED
     </div>
 
     <nav aria-label="Navigasi utama">
-      <a href="index.html" aria-current="page">BERANDA</a>
-      <a href="personel.html">PERSONEL</a>
-      <a href="arsip.html">ARSIP</a>
-      <a href="tentang.html">TENTANG</a>
+      <a href="index.html" aria-current="page">
+        <span class="number">00</span> BERANDA
+      </a>
+      <a href="personel.html">
+        <span class="number">01</span> PERSONEL
+      </a>
+      <a href="arsip.html">
+        <span class="number">02</span> ARSIP PRIBADI
+      </a>
+      <a href="tentang.html">
+        <span class="number">03</span> INFORMASI
+      </a>
     </nav>
   </div>
 </header>
@@ -195,31 +220,40 @@ footer {
   <section class="status">
     ● SYSTEM ONLINE<br>
     ARCHIVE ID: TVD-000<br>
+    RECORD OWNER: TANYA VON DEGURECHAFF<br>
     ACCESS LEVEL: PUBLIC<br>
     STATUS: OPERATIONAL
   </section>
 
   <section class="panel">
     <div class="label">
-      BAB 00 // INTRODUCTION
+      RECORD 000-A // PERSONAL ENTRY
     </div>
 
-    <h2>Selamat Datang di Arsip</h2>
+    <h2>Selamat Datang di Arsipku</h2>
 
     <p>
-      Selamat datang di Tanya Intelligence Archive,
-      sebuah arsip pribadi yang didedikasikan untuk
-      dokumentasi Tanya von Degurechaff.
+      Namaku Tanya von Degurechaff. Ini adalah arsip pribadi
+      yang kususun untuk mencatat identitas, perjalanan hidup,
+      pemikiran, dan berbagai hal yang kuanggap layak
+      untuk didokumentasikan.
     </p>
 
     <p>
-      Gunakan indeks bab di bawah ini untuk membuka
-      berkas yang ingin ditinjau. Setiap bab memiliki
-      halaman tersendiri dalam sistem arsip ini.
+      Setiap catatan memiliki tempatnya sendiri. Aku memilih
+      memisahkan dokumen berdasarkan kategori agar informasi
+      dapat ditemukan dengan mudah tanpa mengorbankan
+      keteraturan arsip.
+    </p>
+
+    <p>
+      Arsip ini akan terus berkembang. Tidak semua catatan
+      harus diselesaikan hari ini; beberapa hal lebih baik
+      ditulis dengan teliti daripada terburu-buru.
     </p>
 
     <p class="label">
-      > INITIALIZING ARCHIVE<span class="cursor">_</span>
+      > ARCHIVE INITIALIZED<span class="cursor">_</span>
     </p>
   </section>
 
@@ -231,43 +265,48 @@ footer {
     <h2>Indeks Dokumen</h2>
 
     <a class="chapter" href="personel.html">
-      <strong> BAB 01 — PERSONEL → </strong>
+      <strong>[01] — PERSONEL →</strong>
       <span>
-        Identitas, profil, dan catatan personel.
+        Data identitas, status personel, dan informasi terkait.
       </span>
     </a>
 
     <a class="chapter" href="arsip.html">
-      <strong> BAB 02 — CHARACTER DOSSIER → </strong>
+      <strong>[02] — ARSIP PRIBADI →</strong>
       <span>
-        Biografi, filosofi, karier militer,
-        dan penghargaan Tanya.
+        Riwayat hidup, asal-usul, prinsip, dan catatan pribadiku.
       </span>
     </a>
 
     <a class="chapter" href="tentang.html">
-      <strong> BAB 03 — TENTANG ARSIP → </strong>
+      <strong>[03] — INFORMASI ARSIP →</strong>
       <span>
-        Tujuan, informasi, dan riwayat arsip.
+        Tujuan dokumentasi, sistem pencatatan, dan riwayat arsip.
       </span>
     </a>
   </section>
 
   <section class="panel">
     <div class="label">
-      SYSTEM NOTES // 000-A
+      RECORD 000-B // OWNER'S NOTE
     </div>
 
-    <h2>Catatan Sistem</h2>
+    <h2>Catatan Pemilik</h2>
 
     <p>
-      Arsip ini merupakan proyek dokumentasi pribadi.
-      Informasi disusun ke dalam beberapa bab agar
-      pengunjung dapat menjelajahi setiap berkas
-      secara terpisah.
+      Aku menyusun arsip ini atas inisiatifku sendiri.
+      Susunan dokumen, isi catatan, dan pembaruan akan
+      kutentukan sesuai kebutuhan.
+    </p>
+
+    <p>
+      Untuk saat ini, aku memilih mengembangkannya secara
+      bertahap. Bagian yang belum lengkap akan diperbarui
+      ketika informasi dan catatan yang diperlukan sudah siap.
     </p>
 
     <p class="label">
+      ARCHIVE OWNER: TANYA VON DEGURECHAFF<br>
       HOST: GITHUB PAGES<br>
       INTERFACE: HTML / CSS
     </p>
