@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d0a">
+<title>Tanya von Degurechaff | Intelligence Archive</title>
+<style>
+:root {
+  --green: #a5ffb4;
+  --muted: #72917a;
+  --bg: #080d0a;
+  --panel: #101a13;
+  --line: #294331;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #dce9de;
+  font-family: monospace;
+  line-height: 1.7;
+}
+header {
+  padding: 24px 18px;
+  border-bottom: 1px solid var(--line);
+  background: #0c140e;
+}
+.tag { color: var(--green); font-size: 12px; }
+h1 {
+  color: var(--green);
+  font-size: clamp(25px, 6vw, 42px);
+  line-height: 1.2;
+  margin: 14px 0;
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+a { color: var(--green); }
+nav a {
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+  text-decoration: none;
+}
+main {
+  width: min(900px, 100%);
+  margin: auto;
+  padding: 22px 16px;
+}
+.status {
+  color: var(--green);
+  border: 1px solid var(--line);
+  padding: 12px;
+  margin-bottom: 22px;
+}
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 18px;
+  margin: 16px 0;
+}
+h2 {
+  color: var(--green);
+  font-size: 17px;
+}
+.label { color: var(--muted); }
+ul { padding-left: 20px; }
+footer {
+  border-top: 1px solid var(--line);
+  padding: 20px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+}
+.cursor {
+  animation: blink 1s steps(2) infinite;
+}
+@keyframes blink { 50% { opacity: 0; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="tag">IMPERIAL INTELLIGENCE NETWORK // II</div>
+  <h1>TANYA VON<br>DEGURECHAFF</h1>
+  <div>PERSONAL INTELLIGENCE ARCHIVE</div>
+  <nav>
+    <a href="#home">BERANDA</a>
+    <a href="#profile">PERSONEL</a>
+    <a href="#records">ARSIP</a>
+    <a href="#about">TENTANG</a>
+  </nav>
+</header>
+
+<main id="home">
+  <div class="status">
+    ● SYSTEM ONLINE<br>
+    ACCESS: PUBLIC<br>
+    ARCHIVE STATUS: OPERATIONAL
+  </div>
+
+  <section class="panel">
+    <div class="label">TERMINAL // WELCOME MESSAGE</div>
+    <h2>Selamat Datang, Pengunjung.</h2>
+    <p>
+      Selamat datang di arsip pribadi Tanya von
+      Degurechaff. Pusat dokumentasi, catatan, dan
+      informasi yang tersimpan dalam satu terminal.
+    </p>
+    <p>> Initializing archive<span class="cursor">_</span></p>
+  </section>
+
+  <section class="panel" id="profile">
+    <div class="label">FILE 001 // PERSONNEL</div>
+    <h2>Profil Personel</h2>
+    <p><span class="label">NAMA:</span> Tanya von Degurechaff</p>
+    <p><span class="label">KLASIFIKASI:</span> PERSONAL ARCHIVE</p>
+    <p><span class="label">STATUS:</span> ACTIVE</p>
+    <p>
+      Arsip ini didedikasikan untuk dokumentasi
+      karakter Tanya von Degurechaff.
+    </p>
+  </section>
+
+  <section class="panel" id="records">
+    <div class="label">FILE 002 // DATABASE</div>
+    <h2>Indeks Arsip</h2>
+    <ul>
+      <li>Catatan dan dokumentasi</li>
+      <li>Profil dan informasi karakter</li>
+      <li>Kumpulan referensi</li>
+      <li>Riwayat pembaruan arsip</li>
+    </ul>
+    <p class="label">
+      INFO: Arsip masih dalam tahap pengembangan.
+    </p>
+  </section>
+
+  <section class="panel" id="about">
+    <div class="label">FILE 003 // ABOUT</div>
+    <h2>Tentang Terminal</h2>
+    <p>
+      Sebuah proyek arsip pribadi dengan antarmuka
+      terminal intelijen militer. Dibangun menggunakan
+      HTML, CSS, dan JavaScript.
+    </p>
+    <p class="label">HOST: GITHUB PAGES</p>
+  </section>
+</main>
+
+<footer>
+  TANYA ARCHIVE // EST. 2026<br>
+  UNAUTHORIZED MODIFICATION IS DISCOURAGED
+</footer>
+</body>
+  </html>
+  
