@@ -2,430 +2,397 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#07110d">
-  <title>BAB 02 // Arsip Pribadi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d0a">
+<meta name="description" content="Arsip pribadi Tanya von Degurechaff mengenai asal-usul, riwayat hidup, dan prinsip pribadi.">
+<title>BAB 02 // Arsip Pribadi</title>
 
-  <style>
-    :root {
-      --bg: #07110d;
-      --panel: #0b1812;
-      --green: #a6d9ad;
-      --bright: #d5f5d5;
-      --muted: #77917c;
-      --line: #294633;
-      --gold: #c8b477;
-      --red: #c77c70;
-    }
+<style>
+:root {
+  --green: #a5ffb4;
+  --muted: #72917a;
+  --bg: #080d0a;
+  --panel: #101a13;
+  --line: #294331;
+  --gold: #c8b77b;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+* { box-sizing: border-box; }
 
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--green);
-      font-family: "Courier New", monospace;
-      line-height: 1.75;
-    }
+html { scroll-behavior: smooth; }
 
-    a {
-      color: var(--bright);
-      text-decoration: none;
-    }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: #dce9de;
+  font-family: monospace;
+  line-height: 1.8;
+}
 
-    a:hover {
-      color: var(--gold);
-    }
+header {
+  padding: 28px 18px;
+  background: #0c140e;
+  border-bottom: 1px solid var(--line);
+}
 
-    header {
-      padding: 28px 20px;
-      border-bottom: 1px solid var(--line);
-      background: #09150f;
-    }
+.container {
+  width: min(850px, 100%);
+  margin: auto;
+}
 
-    .container {
-      width: min(900px, 92%);
-      margin: auto;
-    }
+.tag {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 3px;
+}
 
-    .classification {
-      color: var(--gold);
-      font-size: 11px;
-      letter-spacing: 3px;
-    }
+h1 {
+  color: var(--green);
+  font-size: clamp(28px, 6vw, 44px);
+  line-height: 1.3;
+  margin: 20px 0 12px;
+}
 
-    h1 {
-      margin: 8px 0;
-      color: var(--bright);
-      font-size: clamp(23px, 5vw, 36px);
-      line-height: 1.3;
-    }
+.subtitle {
+  color: var(--muted);
+  font-size: 13px;
+}
 
-    .subtitle {
-      color: var(--muted);
-      font-size: 12px;
-    }
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
 
-    nav {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      padding-top: 18px;
-      font-size: 12px;
-    }
+nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #dce9de;
+  text-decoration: none;
+  font-size: 13px;
+}
 
-    main {
-      padding: 30px 0 55px;
-    }
+nav a .number {
+  display: inline-block;
+  border: 1px solid var(--line);
+  padding: 2px 6px;
+  color: var(--green);
+}
 
-    .notice {
-      padding: 12px 15px;
-      margin-bottom: 25px;
-      border: 1px solid var(--line);
-      background: var(--panel);
-      font-size: 12px;
-    }
+nav a:hover .number,
+nav a:focus .number,
+nav a[aria-current="page"] .number {
+  background: var(--green);
+  color: var(--bg);
+}
 
-    .notice strong {
-      color: var(--gold);
-    }
+main {
+  padding: 24px 16px;
+}
 
-    .record {
-      border: 1px solid var(--line);
-      background: var(--panel);
-      margin-bottom: 22px;
-    }
+.status, .panel {
+  border: 1px solid var(--line);
+  padding: 18px;
+  margin-bottom: 20px;
+  overflow-wrap: anywhere;
+}
 
-    .record-heading {
-      padding: 12px 16px;
-      border-bottom: 1px solid var(--line);
-      color: var(--gold);
-      font-size: 12px;
-      letter-spacing: 2px;
-    }
+.status {
+  color: var(--green);
+  background: #0b130d;
+  font-size: 13px;
+}
 
-    .record-body {
-      padding: 20px;
-    }
+.panel { background: var(--panel); }
 
-    .portrait {
-      width: 100%;
-      max-width: 400px;
-      margin: 0 auto 24px;
-      text-align: center;
-    }
+h2 {
+  color: var(--green);
+  font-size: 18px;
+  margin-top: 8px;
+}
 
-    .portrait img {
-      display: block;
-      width: 100%;
-      height: auto;
-      border: 1px solid var(--line);
-    }
+.label {
+  color: var(--muted);
+  font-size: 12px;
+}
 
-    .portrait figcaption {
-      padding-top: 8px;
-      color: var(--muted);
-      font-size: 11px;
-    }
+.portrait {
+  margin: 18px 0 24px;
+  text-align: center;
+}
 
-    h2 {
-      margin: 0 0 15px;
-      color: var(--bright);
-      font-size: 17px;
-    }
+.portrait img {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: auto;
+  border: 1px solid var(--line);
+}
 
-    h3 {
-      margin: 24px 0 8px;
-      color: var(--gold);
-      font-size: 13px;
-    }
+.portrait figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
 
-    p {
-      margin: 10px 0;
-    }
+.data-row {
+  display: grid;
+  grid-template-columns: minmax(120px, 180px) 1fr;
+  gap: 8px 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line);
+}
 
-    .data {
-      display: grid;
-      grid-template-columns: minmax(105px, 150px) 1fr;
-      gap: 8px 15px;
-      font-size: 13px;
-    }
+.data-row:last-child { border-bottom: none; }
 
-    .key {
-      color: var(--muted);
-    }
+.key { color: var(--muted); }
 
-    .value {
-      color: var(--bright);
-    }
+.value { color: #dce9de; }
 
-    blockquote {
-      margin: 18px 0;
-      padding: 14px 18px;
-      border-left: 2px solid var(--gold);
-      background: #0e1e15;
-      color: var(--bright);
-      font-style: italic;
-    }
+blockquote {
+  border-left: 2px solid var(--gold);
+  margin: 18px 0;
+  padding: 12px 16px;
+  background: #0b130d;
+  color: #dce9de;
+}
 
-    .status {
-      color: var(--green);
-    }
+footer {
+  border-top: 1px solid var(--line);
+  padding: 22px 16px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+}
 
-    .footer-note {
-      color: var(--muted);
-      font-size: 11px;
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    footer {
-      padding: 22px 15px;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      text-align: center;
-      font-size: 11px;
-    }
-
-    @media (max-width: 480px) {
-      .record-body {
-        padding: 15px;
-      }
-
-      .data {
-        grid-template-columns: 1fr;
-        gap: 2px;
-      }
-
-      .value {
-        margin-bottom: 9px;
-      }
-    }
-  </style>
+@media (max-width: 480px) {
+  .data-row {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
+</style>
 </head>
 
 <body>
-  <header>
-    <div class="container">
-      <div class="classification">
-        PERSONAL MILITARY ARCHIVE // BAB 02
-      </div>
 
-      <h1>TANYA VON DEGURECHAFF</h1>
-
-      <div class="subtitle">
-        PRIVATE RECORD // IDENTITY, ORIGIN & SERVICE
-      </div>
-
-      <nav>
-        <a href="index.html">[00] BERANDA</a>
-        <a href="personel.html">[01] PERSONEL</a>
-        <a href="arsip.html">[02] ARSIP PRIBADI</a>
-        <a href="tentang.html">[03] INFORMASI</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-
-    <div class="notice">
-      <strong>DOCUMENT STATUS:</strong> ACTIVE<br>
-      <strong>RECORD OWNER:</strong> TANYA VON DEGURECHAFF<br>
-      <strong>ACCESS:</strong> PUBLIC ARCHIVE
+<header>
+  <div class="container">
+    <div class="tag">
+      PERSONAL MILITARY ARCHIVE // BAB 02
     </div>
 
-    <!-- RECORD 002-A -->
-    <section class="record" id="record-002-a">
-      <div class="record-heading">
-        RECORD 002-A // IDENTITAS PRIBADI
-      </div>
+    <h1>TANYA VON DEGURECHAFF</h1>
 
-      <div class="record-body">
-
-        <figure class="portrait">
-          <img
-            src="4de3c083606a097dc1a15290f49f5fe1.jpg"
-            alt="Potret pribadi Tanya von Degurechaff">
-
-          <figcaption>
-            FIG. 002-A // TANYA VON DEGURECHAFF
-          </figcaption>
-        </figure>
-
-        <h2>01. IDENTITAS</h2>
-
-        <p>
-          Namaku Tanya von Degurechaff. Dokumen ini merupakan
-          catatan pribadi mengenai identitas, asal-usul, perjalanan
-          hidup, dan pengabdianku. Aku menyusunnya sebagai arsip
-          yang dapat kubuka kembali kapan pun diperlukan.
-        </p>
-
-        <div class="data">
-          <div class="key">Nama</div>
-          <div class="value">Tanya von Degurechaff</div>
-
-          <div class="key">Jenis arsip</div>
-          <div class="value">Arsip pribadi</div>
-
-          <div class="key">Status dokumen</div>
-          <div class="value">Aktif</div>
-
-          <div class="key">Pemilik catatan</div>
-          <div class="value">Tanya von Degurechaff</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- RECORD 002-B -->
-    <section class="record" id="record-002-b">
-      <div class="record-heading">
-        RECORD 002-B // ASAL-USUL
-      </div>
-
-      <div class="record-body">
-        <h2>02. KELAHIRAN DAN LATAR BELAKANG</h2>
-
-        <p>
-          Aku terlahir di dunia yang menjadikan kekuatan militer,
-          strategi, dan kepentingan negara sebagai bagian penting
-          dari kehidupan. Sejak awal kehidupanku, keadaan di
-          sekelilingku membentuk lingkungan tempat aku tumbuh
-          dan menentukan jalan yang kelak kupilih.
-        </p>
-
-        <p>
-          Bagiku, asal-usul bukan sekadar catatan mengenai tempat
-          dan waktu kelahiran. Ia merupakan titik awal dari
-          perjalanan panjang yang membentuk cara pandang,
-          keputusan, dan prinsip hidupku.
-        </p>
-
-        <p>
-          Catatan mengenai tempat kelahiran, tanggal lahir, dan
-          riwayat keluargaku akan kutambahkan secara terperinci
-          dalam pembaruan arsip berikutnya.
-        </p>
-      </div>
-    </section>
-
-    <!-- RECORD 002-C -->
-    <section class="record" id="record-002-c">
-      <div class="record-heading">
-        RECORD 002-C // RIWAYAT MILITER
-      </div>
-
-      <div class="record-body">
-        <h2>03. PENGABDIAN DAN KARIER</h2>
-
-        <p>
-          Aku menjalani kehidupan militer dengan memahami bahwa
-          setiap perintah membawa tanggung jawab, sedangkan
-          setiap keputusan dapat menentukan hasil sebuah operasi.
-        </p>
-
-        <p>
-          Disiplin, ketepatan, analisis, dan efisiensi merupakan
-          hal-hal yang kuanggap penting. Dalam menghadapi suatu
-          keadaan, aku lebih memilih menilai situasi berdasarkan
-          fakta daripada membiarkan penilaian pribadi menguasai
-          keputusan.
-        </p>
-
-        <p>
-          Riwayat penugasan, pangkat, operasi, serta pencapaian
-          akan dicatat dalam bagian ini seiring perkembangan arsip.
-        </p>
-      </div>
-    </section>
-
-    <!-- RECORD 002-D -->
-    <section class="record" id="record-002-d">
-      <div class="record-heading">
-        RECORD 002-D // PRINSIP DAN PANDANGAN
-      </div>
-
-      <div class="record-body">
-        <h2>04. PRINSIP PRIBADI</h2>
-
-        <p>
-          Aku tidak menganggap keberhasilan sebagai sesuatu
-          yang dapat diperoleh hanya dengan keberuntungan.
-          Persiapan, perhitungan, dan kemampuan membaca keadaan
-          memiliki peran yang jauh lebih besar daripada sekadar
-          berharap pada hasil yang menguntungkan.
-        </p>
-
-        <p>
-          Aku menghargai keteraturan karena keteraturan
-          memungkinkan seseorang memahami tanggung jawabnya.
-          Aku juga memahami bahwa suatu keputusan harus
-          dipertimbangkan berdasarkan keadaan yang sebenarnya,
-          bukan hanya berdasarkan apa yang ingin dipercayai.
-        </p>
-
-        <blockquote>
-          "Persiapan adalah bagian dari kemenangan.
-          Keputusan yang tepat dimulai dari pemahaman
-          terhadap keadaan."
-        </blockquote>
-
-        <p>
-          Catatan ini menggambarkan prinsip yang ingin kupegang.
-          Aku akan memperbaruinya ketika ada hal penting yang
-          perlu kutambahkan atau koreksi.
-        </p>
-      </div>
-    </section>
-
-    <!-- RECORD 002-E -->
-    <section class="record" id="record-002-e">
-      <div class="record-heading">
-        RECORD 002-E // CATATAN PEMILIK
-      </div>
-
-      <div class="record-body">
-        <h2>05. CATATAN PRIBADI</h2>
-
-        <p>
-          Arsip ini belum selesai. Masih terdapat banyak bagian
-          dari kehidupanku yang belum kutuliskan secara lengkap.
-          Aku memilih menyusunnya secara bertahap agar setiap
-          catatan memiliki tempat dan tujuan yang jelas.
-        </p>
-
-        <p>
-          Setiap pembaruan akan menjadi bagian dari dokumentasi
-          perjalanan hidupku. Aku tidak bermaksud menyelesaikan
-          seluruh catatan dalam satu waktu; ketelitian lebih
-          penting daripada terburu-buru.
-        </p>
-
-        <div class="data">
-          <div class="key">Pemilik</div>
-          <div class="value">Tanya von Degurechaff</div>
-
-          <div class="key">Status arsip</div>
-          <div class="value status">Dalam pengembangan</div>
-
-          <div class="key">Pembaruan</div>
-          <div class="value">Berkala</div>
-        </div>
-      </div>
-    </section>
-
-    <div class="footer-note">
-      END OF CURRENT RECORDS // ADDITIONAL ENTRIES PENDING
+    <div class="subtitle">
+      PRIVATE RECORD // IDENTITY, ORIGIN & SERVICE
     </div>
 
-  </main>
+    <nav aria-label="Navigasi utama">
+      <a href="index.html">
+        <span class="number">00</span> BERANDA
+      </a>
+      <a href="personel.html">
+        <span class="number">01</span> PERSONEL
+      </a>
+      <a href="arsip.html" aria-current="page">
+        <span class="number">02</span> ARSIP PRIBADI
+      </a>
+      <a href="tentang.html">
+        <span class="number">03</span> INFORMASI
+      </a>
+    </nav>
+  </div>
+</header>
 
-  <footer>
-    TANYA VON DEGURECHAFF // PRIVATE ARCHIVE<br>
-    RECORD SERIES 002 // PERSONALLY MAINTAINED
-  </footer>
+<main class="container">
+
+  <section class="status">
+    ● SYSTEM ONLINE<br>
+    ARCHIVE ID: TVD-002<br>
+    RECORD OWNER: TANYA VON DEGURECHAFF<br>
+    ACCESS: PUBLIC<br>
+    STATUS: IN DEVELOPMENT
+  </section>
+
+  <!-- RECORD 002-A -->
+  <section class="panel" id="record-002-a">
+    <div class="label">
+      RECORD 002-A // IDENTITAS PRIBADI
+    </div>
+
+    <figure class="portrait">
+      <img
+        src="4de3c083606a097dc1a15290f49f5fe1.jpg"
+        alt="Potret Tanya von Degurechaff">
+
+      <figcaption>
+        FIG. 002-A // PERSONAL PORTRAIT
+      </figcaption>
+    </figure>
+
+    <h2>Identitas dan Kehidupan</h2>
+
+    <p>
+      Namaku Tanya von Degurechaff. Arsip ini kutulis
+      sebagai catatan pribadi mengenai kehidupanku,
+      perjalanan karier, pemikiran, dan pengalaman
+      yang membentuk diriku.
+    </p>
+
+    <p>
+      Aku memilih mencatat perjalanan hidupku secara
+      terstruktur. Setiap bagian memiliki nomor dan
+      kategorinya sendiri agar riwayatku dapat kutinjau
+      kembali dengan mudah.
+    </p>
+  </section>
+
+  <!-- RECORD 002-B -->
+  <section class="panel" id="record-002-b">
+    <div class="label">
+      RECORD 002-B // KELAHIRAN DAN ASAL-USUL
+    </div>
+
+    <h2>01. Kelahiran</h2>
+
+    <p>
+      Aku terlahir di Kekaisaran, dalam sebuah dunia
+      yang menjadikan kekuatan militer, kepentingan
+      negara, dan persaingan antarbangsa sebagai
+      bagian dari kenyataan hidup.
+    </p>
+
+    <p>
+      Sejak awal kehidupanku, lingkungan tempatku
+      tumbuh menjadi bagian dari perjalanan yang
+      membawaku menuju kehidupan militer.
+      Namun, catatan mengenai tanggal kelahiran,
+      tempat kelahiran yang lebih spesifik, dan
+      keluargaku masih akan kulengkapi.
+    </p>
+  </section>
+
+  <!-- RECORD 002-C -->
+  <section class="panel" id="record-002-c">
+    <div class="label">
+      RECORD 002-C // PERJALANAN HIDUP
+    </div>
+
+    <h2>02. Riwayat Kehidupan</h2>
+
+    <p>
+      Perjalananku tidak hanya ditentukan oleh keadaan
+      di sekelilingku, tetapi juga oleh keputusan yang
+      kuambil ketika menghadapi berbagai tantangan.
+    </p>
+
+    <p>
+      Aku terbiasa menilai keadaan melalui pengamatan,
+      perhitungan, dan pertimbangan yang matang.
+      Bagiku, memahami situasi merupakan langkah
+      penting sebelum menentukan tindakan.
+    </p>
+
+    <p>
+      Catatan mengenai masa kecil, pendidikan, dan
+      awal pengabdianku akan kutambahkan secara
+      bertahap dalam pembaruan arsip berikutnya.
+    </p>
+  </section>
+
+  <!-- RECORD 002-D -->
+  <section class="panel" id="record-002-d">
+    <div class="label">
+      RECORD 002-D // PENGABDIAN MILITER
+    </div>
+
+    <h2>03. Karier Militer</h2>
+
+    <p>
+      Kehidupan militernya merupakan bagian penting
+      dari riwayatku. Dalam menjalankan tugas, aku
+      menempatkan disiplin, efisiensi, dan ketepatan
+      pengambilan keputusan sebagai hal yang utama.
+    </p>
+
+    <p>
+      Setiap penugasan membawa tanggung jawab
+      tersendiri. Aku berusaha memahami kondisi
+      operasi sebelum menentukan langkah yang
+      menurutku paling tepat.
+    </p>
+
+    <p>
+      Rincian operasi, penugasan, dan pencapaian
+      militernya akan dicatat dalam bagian ini
+      setelah disusun lebih lengkap.
+    </p>
+  </section>
+
+  <!-- RECORD 002-E -->
+  <section class="panel" id="record-002-e">
+    <div class="label">
+      RECORD 002-E // PRINSIP PRIBADI
+    </div>
+
+    <h2>04. Pandangan dan Prinsip</h2>
+
+    <p>
+      Aku menghargai persiapan dan perencanaan.
+      Keputusan yang baik tidak seharusnya hanya
+      bergantung pada harapan, tetapi juga pada
+      pemahaman terhadap keadaan yang sebenarnya.
+    </p>
+
+    <p>
+      Aku memandang keteraturan sebagai sarana
+      untuk menjaga kejelasan tanggung jawab.
+      Dengan mengetahui tujuan dan mempertimbangkan
+      konsekuensi, aku dapat menentukan langkah
+      secara lebih terarah.
+    </p>
+
+    <blockquote>
+      Persiapan, pertimbangan, dan ketegasan:
+      tiga hal yang ingin kujaga dalam setiap keputusan.
+    </blockquote>
+  </section>
+
+  <!-- RECORD 002-F -->
+  <section class="panel" id="record-002-f">
+    <div class="label">
+      RECORD 002-F // CATATAN PEMILIK
+    </div>
+
+    <h2>05. Catatan Pribadi</h2>
+
+    <p>
+      Arsip ini belum selesai. Masih banyak hal yang
+      ingin kutambahkan, perjelas, dan susun kembali.
+      Aku akan mengembangkannya sedikit demi sedikit,
+      memastikan setiap bagian memiliki tempat yang
+      sesuai dalam dokumentasi kehidupanku.
+    </p>
+
+    <p class="label">
+      RECORD OWNER: TANYA VON DEGURECHAFF<br>
+      DOCUMENT STATUS: IN DEVELOPMENT<br>
+      END OF FILE // 002
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  TANYA INTELLIGENCE ARCHIVE<br>
+  PERSONAL RECORD SERIES // 002<br>
+  END OF FILE
+</footer>
+
 </body>
 </html>
